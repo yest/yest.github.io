@@ -9,7 +9,7 @@ description: "Academic profile, educational background, and research interests o
 
 Hello! I am **Yudianto Sujana**. 
 
-I am currently a **Lecturer** at the Computer Education Department, Faculty of Teacher Training and Education, **Universitas Sebelas Maret (UNS)**, Surakarta, Indonesia. 
+I am currently a **Lecturer** at the Informatics Education Program, Faculty of Teacher Training and Education, **Universitas Sebelas Maret (UNS)**, Surakarta, Indonesia. 
 
 Concurrently, I am pursuing my **Ph.D.** at the Department of Computer Science and Information Engineering, **National Cheng Kung University (NCKU)**, Taiwan, where I am also an active member of the *Intelligent Knowledge Management Laboratory*.
 
