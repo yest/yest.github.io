@@ -14,7 +14,7 @@ This website serves as a central, organized repository for **lecture materials, 
 
 ---
 
-## urrent Courses
+## Current Courses
 
 Below are the courses I am currently teaching. Click on a course to access its specific materials, syllabus, and assignments.
 
