@@ -3,12 +3,12 @@ title: Normalisasi
 permalink: /normalisasi/
 ---
 
-# 📚 MODUL MATA KULIAH BASIS DATA
+# MODUL MATA KULIAH BASIS DATA
 ## Topik: Normalisasi Basis Data
 
 ---
 
-## 📑 Daftar Isi
+## Daftar Isi
 
 1. [Pengantar & Hubungan dengan ERD](#1-pengantar--hubungan-dengan-erd)
 2. [Konsep Dasar Normalisasi](#2-konsep-dasar-normalisasi)
@@ -53,12 +53,12 @@ Setelah ERD selesai dirancang, langkah selanjutnya adalah **mentransformasikan**
 
 Meskipun ERD sudah memberikan gambaran struktur data, **hasil transformasi langsung dari ERD ke tabel belum tentu optimal**. Sering kali kita mendapatkan tabel-tabel yang:
 
-- ❌ Mengandung **redundansi** (data berulang)
-- ❌ Rentan terhadap **anomali** (kesalahan saat insert, update, delete)
-- ❌ Memiliki **atribut yang tidak bergantung penuh** pada kunci utama
-- ❌ Menyimpan **data campuran** yang seharusnya dipisah
+- Mengandung **redundansi** (data berulang)
+- Rentan terhadap **anomali** (kesalahan saat insert, update, delete)
+- Memiliki **atribut yang tidak bergantung penuh** pada kunci utama
+- Menyimpan **data campuran** yang seharusnya dipisah
 
-> 💡 **Inilah alasan mengapa kita memerlukan NORMALISASI.**
+> **Inilah alasan mengapa kita memerlukan NORMALISASI.**
 
 ### 1.4 Posisi Normalisasi dalam Siklus Pengembangan Basis Data
 
@@ -116,7 +116,7 @@ Normalisasi bekerja dengan prinsip **dekomposisi** (pemecahan):
   semakin sedikit redundansi.
 ```
 
-> 📌 **Catatan penting:** Dalam praktik industri, normalisasi hingga **3NF atau BCNF** umumnya sudah dianggap **cukup**. Bentuk normal 4NF dan 5NF lebih bersifat akademis dan digunakan pada kasus-kasus khusus.
+> **Catatan penting:** Dalam praktik industri, normalisasi hingga **3NF atau BCNF** umumnya sudah dianggap **cukup**. Bentuk normal 4NF dan 5NF lebih bersifat akademis dan digunakan pada kasus-kasus khusus.
 
 ---
 
@@ -142,19 +142,19 @@ Perhatikan tabel **KULIAH_MAHASISWA** berikut yang merupakan hasil transformasi 
 
 **Masalah:** Kita **tidak bisa** menambahkan data baru tanpa data lain yang menyertainya.
 
-> 💡 **Contoh:** Kita ingin menambahkan mata kuliah baru "Kecerdasan Buatan" (MK04, 3 SKS) yang diajarkan oleh Dr. Rina. Namun, karena belum ada mahasiswa yang mengambil mata kuliah tersebut, kita **tidak bisa** menyisipkan baris baru karena kolom NIM (sebagai bagian dari *primary key*) tidak boleh NULL.
+> **Contoh:** Kita ingin menambahkan mata kuliah baru "Kecerdasan Buatan" (MK04, 3 SKS) yang diajarkan oleh Dr. Rina. Namun, karena belum ada mahasiswa yang mengambil mata kuliah tersebut, kita **tidak bisa** menyisipkan baris baru karena kolom NIM (sebagai bagian dari *primary key*) tidak boleh NULL.
 
 #### b) Anomali Pembaruan (*Update Anomaly*)
 
 **Masalah:** Perubahan satu data mengharuskan kita mengubah **banyak baris** secara konsisten.
 
-> 💡 **Contoh:** Jika Prof. Susi pindah alamat kantor dan namanya berubah menjadi "Prof. Susi Hartono", kita harus mengubah **semua baris** yang mengandung NIP_Dosen = D01 (baris 1 dan 3). Jika kita lupa mengubah salah satu, data menjadi **tidak konsisten**.
+> **Contoh:** Jika Prof. Susi pindah alamat kantor dan namanya berubah menjadi "Prof. Susi Hartono", kita harus mengubah **semua baris** yang mengandung NIP_Dosen = D01 (baris 1 dan 3). Jika kita lupa mengubah salah satu, data menjadi **tidak konsisten**.
 
 #### c) Anomali Penghapusan (*Deletion Anomaly*)
 
 **Masalah:** Menghapus satu data menyebabkan **hilangnya data lain** yang sebenarnya masih diperlukan.
 
-> 💡 **Contoh:** Jika mahasiswa Doni (NIM 103) keluar dari universitas dan kita menghapus barisnya, maka informasi bahwa mata kuliah "Pemrograman" diajarkan oleh Dr. Budi juga **ikut hilang** (karena hanya Doni satu-satunya yang mengambil MK02 di data saat ini).
+> **Contoh:** Jika mahasiswa Doni (NIM 103) keluar dari universitas dan kita menghapus barisnya, maka informasi bahwa mata kuliah "Pemrograman" diajarkan oleh Dr. Budi juga **ikut hilang** (karena hanya Doni satu-satunya yang mengambil MK02 di data saat ini).
 
 ---
 
@@ -186,19 +186,19 @@ Dari tabel KULIAH_MAHASISWA di atas, kita dapat mengidentifikasi FD berikut:
 
 `X → Y` adalah ketergantungan penuh jika Y bergantung pada **seluruh** atribut dalam X, bukan hanya sebagian.
 
-> 💡 **Contoh:** `{NIM, Kode_MK} → Nilai` adalah ketergantungan **penuh** karena Nilai tidak bisa ditentukan hanya oleh NIM saja atau Kode_MK saja.
+> **Contoh:** `{NIM, Kode_MK} → Nilai` adalah ketergantungan **penuh** karena Nilai tidak bisa ditentukan hanya oleh NIM saja atau Kode_MK saja.
 
 #### b) Ketergantungan Fungsional Parsial (*Partial Functional Dependency*)
 
 `X → Y` adalah ketergantungan parsial jika Y hanya bergantung pada **sebagian** dari X.
 
-> 💡 **Contoh:** `{NIM, Kode_MK} → Nama_Mhs` adalah ketergantungan **parsial** karena Nama_Mhs hanya bergantung pada NIM saja, tidak perlu Kode_MK.
+> **Contoh:** `{NIM, Kode_MK} → Nama_Mhs` adalah ketergantungan **parsial** karena Nama_Mhs hanya bergantung pada NIM saja, tidak perlu Kode_MK.
 
 #### c) Ketergantungan Fungsional Transitif (*Transitive Functional Dependency*)
 
 `X → Z` adalah ketergantungan transitif jika terdapat atribut Y sehingga `X → Y` dan `Y → Z`, di mana Y **bukan** bagian dari X dan X **tidak** bergantung pada Y.
 
-> 💡 **Contoh:** `NIM → Jurusan` dan `Jurusan → Dekan`, maka `NIM → Dekan` adalah ketergantungan **transitif** melalui Jurusan.
+> **Contoh:** `NIM → Jurusan` dan `Jurusan → Dekan`, maka `NIM → Dekan` adalah ketergantungan **transitif** melalui Jurusan.
 
 ---
 
@@ -208,10 +208,10 @@ Dari tabel KULIAH_MAHASISWA di atas, kita dapat mengidentifikasi FD berikut:
 
 Sebuah tabel memenuhi **1NF** jika:
 
-- ✅ Setiap kolom berisi **nilai atomik** (tidak dapat dipecah lagi)
-- ✅ **Tidak ada** kelompok atribut yang berulang (*repeating groups*)
-- ✅ Setiap baris bersifat **unik** (terdapat *primary key*)
-- ✅ Setiap kolom memiliki **satu tipe data** yang konsisten
+- Setiap kolom berisi **nilai atomik** (tidak dapat dipecah lagi)
+- **Tidak ada** kelompok atribut yang berulang (*repeating groups*)
+- Setiap baris bersifat **unik** (terdapat *primary key*)
+- Setiap kolom memiliki **satu tipe data** yang konsisten
 
 ### 5.2 Contoh Pelanggaran 1NF
 
@@ -249,7 +249,7 @@ Perhatikan tabel **MAHASISWA** berikut:
 
 **Primary Key:** `{NIM, Telepon, Mata_Kuliah}` (kombinasi tiga atribut)
 
-> ⚠️ **Perhatikan:** Tabel sudah memenuhi 1NF, tetapi **redundansi sangat tinggi**! Data nama "Andi" diulang 4 kali. Ini akan ditangani di 2NF.
+> **Perhatikan:** Tabel sudah memenuhi 1NF, tetapi **redundansi sangat tinggi**! Data nama "Andi" diulang 4 kali. Ini akan ditangani di 2NF.
 
 ---
 
@@ -259,11 +259,11 @@ Perhatikan tabel **MAHASISWA** berikut:
 
 Sebuah tabel memenuhi **2NF** jika:
 
-- ✅ Sudah memenuhi **1NF**
-- ✅ **Tidak ada** ketergantungan fungsional **parsial** terhadap *primary key*
+- Sudah memenuhi **1NF**
+- **Tidak ada** ketergantungan fungsional **parsial** terhadap *primary key*
   - Artinya: Setiap atribut non-key harus bergantung **penuh** pada **seluruh** *primary key*, bukan hanya sebagian.
 
-> 📌 **Catatan:** Jika *primary key* hanya terdiri dari **satu atribut**, maka tabel **otomatis** memenuhi 2NF (karena tidak mungkin ada ketergantungan parsial).
+> **Catatan:** Jika *primary key* hanya terdiri dari **satu atribut**, maka tabel **otomatis** memenuhi 2NF (karena tidak mungkin ada ketergantungan parsial).
 
 ### 6.2 Contoh Pelanggaran 2NF
 
@@ -302,7 +302,7 @@ Ketergantungan fungsional yang teridentifikasi:
 
 **PK:** `{NIM, Mata_Kuliah}`
 
-✅ Sekarang tidak ada lagi ketergantungan parsial. Setiap atribut non-key bergantung penuh pada PK-nya masing-masing.
+Sekarang tidak ada lagi ketergantungan parsial. Setiap atribut non-key bergantung penuh pada PK-nya masing-masing.
 
 ---
 
@@ -312,11 +312,11 @@ Ketergantungan fungsional yang teridentifikasi:
 
 Sebuah tabel memenuhi **3NF** jika:
 
-- ✅ Sudah memenuhi **2NF**
-- ✅ **Tidak ada** ketergantungan fungsional **transitif** terhadap *primary key*
+- Sudah memenuhi **2NF**
+- **Tidak ada** ketergantungan fungsional **transitif** terhadap *primary key*
   - Artinya: Setiap atribut non-key harus bergantung **langsung** pada *primary key*, **bukan** melalui atribut non-key lainnya.
 
-> 🎯 **Mnemonic populer:** *"Every non-key attribute must provide a fact about the key, the whole key, and nothing but the key."* — Bill Kent
+> **Mnemonic populer:** *"Every non-key attribute must provide a fact about the key, the whole key, and nothing but the key."* — Bill Kent
 
 ### 7.2 Contoh Pelanggaran 3NF
 
@@ -332,14 +332,14 @@ Perhatikan tabel **MAHASISWA_JURUSAN** berikut (sudah 2NF):
 **Primary Key:** `NIM`
 
 **Ketergantungan Fungsional:**
-- `NIM → Nama, Kode_Jurusan` ✅ (langsung ke PK)
-- `Kode_Jurusan → Nama_Jurusan, Dekan` ⚠️ (transitif!)
+- `NIM → Nama, Kode_Jurusan` (langsung ke PK)
+- `Kode_Jurusan → Nama_Jurusan, Dekan` (transitif!)
 - `NIM → Nama_Jurusan, Dekan` (melalui Kode_Jurusan → **TRANSITIF**)
 
 **Masalah:**
-- 🔴 **Anomali Update:** Jika Dekan Teknik Informatika berganti, kita harus update semua baris dengan Kode_Jurusan = J01.
-- 🔴 **Anomali Insert:** Tidak bisa menambahkan jurusan baru tanpa ada mahasiswa.
-- 🔴 **Anomali Delete:** Jika semua mahasiswa TI dihapus, info jurusan TI ikut hilang.
+- **Anomali Update:** Jika Dekan Teknik Informatika berganti, kita harus update semua baris dengan Kode_Jurusan = J01.
+- **Anomali Insert:** Tidak bisa menambahkan jurusan baru tanpa ada mahasiswa.
+- **Anomali Delete:** Jika semua mahasiswa TI dihapus, info jurusan TI ikut hilang.
 
 ### 7.3 Proses Normalisasi ke 3NF
 
@@ -366,7 +366,7 @@ Perhatikan tabel **MAHASISWA_JURUSAN** berikut (sudah 2NF):
 
 **PK:** `Kode_Jurusan`
 
-✅ Sekarang semua atribut non-key bergantung **langsung** pada PK-nya masing-masing. Tidak ada lagi ketergantungan transitif.
+Sekarang semua atribut non-key bergantung **langsung** pada PK-nya masing-masing. Tidak ada lagi ketergantungan transitif.
 
 ---
 
@@ -376,10 +376,10 @@ Perhatikan tabel **MAHASISWA_JURUSAN** berikut (sudah 2NF):
 
 Sebuah tabel memenuhi **BCNF** jika:
 
-- ✅ Sudah memenuhi **3NF**
-- ✅ Untuk **setiap** ketergantungan fungsional `X → Y` yang non-trivial (Y ⊄ X), **X harus merupakan *superkey***.
+- Sudah memenuhi **3NF**
+- Untuk **setiap** ketergantungan fungsional `X → Y` yang non-trivial (Y ⊄ X), **X harus merupakan *superkey***.
 
-> 📌 **Perbedaan dengan 3NF:** 3NF masih mengizinkan ketergantungan `X → Y` di mana X bukan superkey **asalkan** Y adalah bagian dari *candidate key*. BCNF **tidak** mengizinkan pengecualian ini. BCNF lebih ketat dari 3NF.
+> **Perbedaan dengan 3NF:** 3NF masih mengizinkan ketergantungan `X → Y` di mana X bukan superkey **asalkan** Y adalah bagian dari *candidate key*. BCNF **tidak** mengizinkan pengecualian ini. BCNF lebih ketat dari 3NF.
 
 ### 8.2 Kapan 3NF ≠ BCNF?
 
@@ -410,8 +410,8 @@ Perhatikan tabel **JADWAL_KULIAH**:
 - `Dosen → Mata_Kuliah` (setiap dosen hanya mengajar 1 MK)
 
 **Candidate Keys:**
-- `{Mahasiswa, Mata_Kuliah}` ✅
-- `{Mahasiswa, Dosen}` ✅ (karena Dosen → Mata_Kuliah)
+- `{Mahasiswa, Mata_Kuliah}` 
+- `{Mahasiswa, Dosen}` (karena Dosen → Mata_Kuliah)
 
 **Analisis:**
 - FD `Dosen → Mata_Kuliah`: Dosen **bukan** superkey, tetapi Mata_Kuliah adalah bagian dari candidate key → **3NF terpenuhi** (pengecualian 3NF), tetapi **BCNF TIDAK terpenuhi**.
@@ -440,7 +440,7 @@ Perhatikan tabel **JADWAL_KULIAH**:
 
 **PK:** `{Mahasiswa, Dosen}`
 
-✅ Sekarang setiap FD memiliki determinan yang merupakan superkey. BCNF terpenuhi.
+Sekarang setiap FD memiliki determinan yang merupakan superkey. BCNF terpenuhi.
 
 ---
 
@@ -456,8 +456,8 @@ Sebelum memahami 4NF, kita perlu mengenal **MVD**.
 
 Sebuah tabel memenuhi **4NF** jika:
 
-- ✅ Sudah memenuhi **BCNF**
-- ✅ **Tidak ada** ketergantungan multivalue yang non-trivial
+- Sudah memenuhi **BCNF**
+- **Tidak ada** ketergantungan multivalue yang non-trivial
 
 ### 9.3 Contoh Pelanggaran 4NF
 
@@ -500,7 +500,7 @@ Tabel **DOSEN_KEAHLIAN**:
 | D02 | CEH |
 | D02 | CompTIA Security+ |
 
-✅ MVD sudah dihilangkan. 4NF terpenuhi.
+MVD sudah dihilangkan. 4NF terpenuhi.
 
 ---
 
@@ -514,8 +514,8 @@ Tabel **DOSEN_KEAHLIAN**:
 
 Sebuah tabel memenuhi **5NF** (juga disebut *Project-Join Normal Form / PJNF*) jika:
 
-- ✅ Sudah memenuhi **4NF**
-- ✅ Setiap *join dependency* adalah **implikasi** dari *candidate key*
+- Sudah memenuhi **4NF**
+- Setiap *join dependency* adalah **implikasi** dari *candidate key*
 
 ### 10.3 Contoh Kasus 5NF (Kasus Klasik)
 
@@ -561,7 +561,7 @@ Tabel ini **bisa** didekomposisi menjadi **tiga** tabel:
 | ProyekB | Database |
 | ProyekB | AI |
 
-✅ Dengan melakukan *natural join* ketiga tabel ini, kita mendapatkan kembali data asli tanpa baris palsu. 5NF terpenuhi.
+Dengan melakukan *natural join* ketiga tabel ini, kita mendapatkan kembali data asli tanpa baris palsu. 5NF terpenuhi.
 
 ---
 
@@ -582,15 +582,15 @@ Tabel ini **bisa** didekomposisi menjadi **tiga** tabel:
 
 Dalam praktik nyata, terkadang kita **sengaja** melakukan **denormalisasi** (mundur dari bentuk normal tinggi) dengan pertimbangan:
 
-- ⚡ **Performa query:** Terlalu banyak JOIN memperlambat query.
-- 📊 **Data warehouse / OLAP:** Lebih mengutamakan kecepatan baca.
-- 💾 **Caching / materialized view:** Data duplikat untuk akses cepat.
+- **Performa query:** Terlalu banyak JOIN memperlambat query.
+- **Data warehouse / OLAP:** Lebih mengutamakan kecepatan baca.
+- **Caching / materialized view:** Data duplikat untuk akses cepat.
 
-> 🎯 **Prinsip:** *"Normalize until it hurts, denormalize until it works."* — Anonim
+> **Prinsip:** *"Normalize until it hurts, denormalize until it works."* — Anonim
 
 ---
 
-## 📚 Referensi
+## Referensi
 
 1. Codd, E.F. (1970). *A Relational Model of Data for Large Shared Data Banks*. Communications of the ACM.
 2. Elmasri, R. & Navathe, S.B. (2016). *Fundamentals of Database Systems*, 7th Edition. Pearson.
@@ -599,12 +599,6 @@ Dalam praktik nyata, terkadang kita **sengaja** melakukan **denormalisasi** (mun
 
 ---
 
-> 🎓 **Catatan untuk mahasiswa:** Pastikan Anda memahami **proses** normalisasi, bukan hanya menghafal definisi. Selamat belajar!
+> **Catatan untuk mahasiswa:** Pastikan Anda memahami **proses** normalisasi, bukan hanya menghafal definisi. Selamat belajar!
 
 ---
-
-## 🔗 Link Terkait
-
-- [📝 Soal Latihan Normalisasi](./soal-latihan.html)
-- [📊 Soal Studi Kasus](./soal-studi-kasus.html)
-- [🏠 Kembali ke Beranda](./index.html)
