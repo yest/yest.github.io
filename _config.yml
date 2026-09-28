@@ -94,3 +94,11 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+
+# ===== Konfigurasi Just the Docs =====
+gh_edit_link: false
+gh_edit_link_text: ""
+gh_edit_repository: ""
+gh_edit_branch: ""
+gh_edit_source: ""
+gh_edit_view_mode: ""
