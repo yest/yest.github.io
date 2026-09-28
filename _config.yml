@@ -95,10 +95,9 @@ defaults:
     values:
       layout: "post"
 
-# ===== Konfigurasi Just the Docs =====
-gh_edit_link: false
-gh_edit_link_text: ""
-gh_edit_repository: ""
-gh_edit_branch: ""
-gh_edit_source: ""
-gh_edit_view_mode: ""
+# ===== Konfigurasi Docsy =====
+enableEditPage: false
+enableGitHubEdit: false
+github_repo: ""
+github_branch: ""
+github_subdir: ""
