@@ -96,8 +96,8 @@ defaults:
       layout: "post"
 
 # ===== Konfigurasi Docsy =====
-enableEditPage: false
-enableGitHubEdit: false
-github_repo: ""
-github_branch: ""
-github_subdir: ""
+params:
+  enableEditPage: false
+  enableGitHubEdit: false
+  ui:
+    showLightDarkModeMenu: false
