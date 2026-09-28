@@ -1,41 +1,38 @@
 ---
-layout: page
-title: Docsy Jekyll Theme
+layout: default
+title: Home
 permalink: /
+description: "Welcome to the official course materials and lecture resources portal of Yudianto Sujana."
+nav_order: 1
 ---
 
-# Welcome to Docsy Jekyll
+# 🎓 Welcome to the Course Materials Portal
 
-This is a starter template for a docsy jekyll theme.
+Hello and welcome! I am **Yudianto Sujana**, a Lecturer at Universitas Sebelas Maret (UNS). 
 
-![assets/img/docsy-jekyll.png](assets/img/docsy-jekyll.png)
+This website serves as a central, organized repository for **lecture materials, assignments, slides, and supplementary resources** for the courses I teach. My goal is to make learning materials easily accessible to support your academic journey.
 
-## Purpose
+---
 
-GitHub pages uses Jekyll natively, so when I make documentation, I typically
-look for Jekyll templates. Why? Using Jekyll means that I can use markdown,
-and allow for users to easily contribute, and build automatically just by
-way of pushing to a master branch (or general GitHub pages).
-I found Docsy, a beautiful Hugo template, but it requires hugo with GoLang
-which doesn't render natively on GitHub pages. For this reason, I've spent
-some time creating a custom Jekyll template that is (almost) as beautiful,
-and includes all the features that I might want.
+## 📚 Current Courses
 
-## Features
+Below are the courses I am currently teaching. Click on a course to access its specific materials, syllabus, and assignments.
 
-What are these features? You should see the {% include doc.html name="Getting Started" path="getting-started" %}
-guide for a complete summary. Briefly:
+- [**Database**](/database/)
+- [**Mobile Programming**](/mobile/)
+- [**Artificial Intelligence for Education**](/ai/)
+- [**Text Mining**](/textmining/)
 
- - *User interaction* including consistent permalinks, links to ask questions via GitHub issues, and edit the file on GitHub directly.
- - *Search* across posts, documentation, and other site pages, with an ability to exclude from search.
- - *External Search* meaning an ability to link any page tag to trigger an external search.
- - *Documentation* A documentation collection that was easy to organize on the filesystem, render with nested headings for the user, and refer to in markdown.
- - *Pages* A separate folder for more traditional pages (e.g, about).
- - *Navigation*: Control over the main navigation on the left of the page, and automatic generation of table of contents for each page on the right.
- - *News* A posts feed for news and updates, along with an archive (organized by year).
- - *Templates* or specifically, "includes" that make it easy to create an alert, documentation link, or other content.
- - *Continuous Integration* recipes to preview the site
+---
 
+## 📬 Need Help?
 
-For features, getting started with development, see the {% include doc.html name="Getting Started" path="getting-started" %} page. Would you like to request a feature or contribute?
-[Open an issue]({{ site.repo }}/issues)
+If you have questions regarding the course materials, please feel free to contact me:
+
+- 📧 **Email:** [yudianto.sujana@staff.uns.ac.id](mailto:yudianto.sujana@staff.uns.ac.id)
+- 🏫 **Office:** Informatics Education Program, Faculty of Teacher Training and Education, Universitas Sebelas Maret, Surakarta.
+- 🌐 **Personal Website:** [yudiantosujana.com](https://yudiantosujana.com/)
+
+---
+
+> *"Education is not the filling of a pail, but the lighting of a fire." – W.B. Yeats*
