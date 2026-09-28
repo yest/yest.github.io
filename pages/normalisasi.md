@@ -1,9 +1,6 @@
 ---
-layout: default
-title: "Modul Normalisasi Basis Data"
-description: "Materi lengkap normalisasi basis data dari 1NF hingga 5NF"
-author: "Tim Dosen Basis Data"
-date: 2025
+title: Normalisasi
+permalink: /normalisasi/
 ---
 
 # 📚 MODUL MATA KULIAH BASIS DATA
