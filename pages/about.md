@@ -53,11 +53,11 @@ My primary research interests lie in **Natural Language Processing (NLP)**, with
 
 1. **Exploiting Microblog Conversation Structures to Detect Rumors**  
    *Proceedings of the 28th International Conference on Computational Linguistics (COLING 2020)*  
-   [🔗 View Publication](#) *(Replace with actual DOI or link)*
+   [🔗 View Publication](https://www.aclweb.org/anthology/2020.coling-main.473/)
 
 2. **Rumor Detection on Twitter Using Multiloss Hierarchical BiLSTM with an Attenuation Factor**  
    *Proceedings of the 1st Conference of the Asia-Pacific Chapter of the Association for Computational Linguistics and the 10th International Joint Conference on Natural Language Processing (AACL-IJCNLP 2020)*  
-   [🔗 View Publication](#) *(Replace with actual DOI or link)*
+   [🔗 View Publication](https://www.aclweb.org/anthology/2020.aacl-main.3/)
 
 ---
 
