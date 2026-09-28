@@ -73,11 +73,10 @@ My primary research interests lie in **Natural Language Processing (NLP)**, with
 
 Interested in collaborating or discussing research? Feel free to reach out.
 
-- 📧 **Email:** [your.email@domain.com](mailto:your.email@domain.com) *(Please replace with your actual email)*
+- 📧 **Email:** [your.email@domain.com](mailto:yudianto.sujana@staff.uns.ac.id)
 - 🌐 **Website:** [yudiantosujana.com](https://yudiantosujana.com/)
-- 💼 **LinkedIn:** [linkedin.com/in/yourprofile](https://linkedin.com) *(Optional)*
-- 🐙 **GitHub:** [github.com/yourusername](https://github.com) *(Optional)*
-- 🎓 **Google Scholar:** [scholar.google.com/yourprofile](https://scholar.google.com) *(Optional)*
+- 🐙 **GitHub:** [github.com/yourusername](https://github.com/yest)
+- 🎓 **Google Scholar:** [scholar.google.com/yourprofile]([https://scholar.google.com](https://scholar.google.com/citations?user=a-kKHlsAAAAJ&hl=en&authuser=1))
 
 ---
 
