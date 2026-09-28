@@ -1,5 +1,5 @@
 - title: Home
-  links:
+  links: "index"
 - title: "Normalisasi"
   url: "normalisasi"
     #   children:
